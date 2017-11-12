@@ -29,6 +29,6 @@
     "serverless": "^1.7.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha"
+    "test": "./node_modules/.bin/mocha ./test/*.js"
   }
 }
