@@ -2925,3 +2925,5 @@ jenkins/jobs/my-serverless-pipeline/builds/1/log
 jenkins/secrets/hudson.console.AnnotatedLargeText.consoleAnnotator
 jenkins/secrets/hudson.console.ConsoleNote.MAC
 jenkins/secrets/hudson.model.Job.serverCookie
+jenkins/jobs/my-serverless-pipeline/builds/2/build.xml
+jenkins/jobs/my-serverless-pipeline/builds/2/log
