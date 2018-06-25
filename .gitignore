@@ -2927,3 +2927,7 @@ jenkins/secrets/hudson.console.ConsoleNote.MAC
 jenkins/secrets/hudson.model.Job.serverCookie
 jenkins/jobs/my-serverless-pipeline/builds/2/build.xml
 jenkins/jobs/my-serverless-pipeline/builds/2/log
+jenkins/jobs/my-serverless-pipeline/builds/3/build.xml
+jenkins/jobs/my-serverless-pipeline/builds/3/log
+jenkins/jobs/my-serverless-pipeline/builds/3/build.xml
+.gitignore

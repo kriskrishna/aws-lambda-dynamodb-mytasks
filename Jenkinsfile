@@ -1,4 +1,6 @@
 pipeline {
+    agent any
+
     environment {
         AWS_DEFAULT_REGION="us-east-1"
     }
@@ -29,57 +31,5 @@ pipeline {
              }
         }
 
-        stage('Deploy to SIT') {
-
-            steps{
-                
-            }
-
-        }
-
-        stage('System Test on SIT') {
-
-            steps{
-                
-            }
-
-        }
-
-        stage('Deploy to UAT'){
-
-            steps{
-                
-            }
-
-        }
-
-        stage('System Test on UAT') {
-
-            steps{
-                
-            }
-
-        }
-
-        stage('Approval'){
-
-            steps{
-                
-            }
-            
-        }
-
-        stage('Deploy to Prod'){
-            steps{
-                
-            }
-        }
-
-        stage('Smoke Test'){
-            steps{
-                
-            }
-
-        }
     }
 }
