@@ -7,14 +7,14 @@ pipeline {
 
     stages {
         stage ('init') {
-            steps{
+            steps {
                 
             }
         }
 
         stage ('Deploy to DEV'){
 
-            steps{
+            steps {
                 withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'dev-serverless', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
                     sh "serverless deploy --stage dev"
                 }
@@ -23,7 +23,7 @@ pipeline {
 
         stage ('System Test on Dev'){
              
-             steps{
+             steps {
 
                 withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'dev-serverless', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
                     // some block
