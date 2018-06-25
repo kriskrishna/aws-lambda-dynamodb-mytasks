@@ -2931,3 +2931,7 @@ jenkins/jobs/my-serverless-pipeline/builds/3/build.xml
 jenkins/jobs/my-serverless-pipeline/builds/3/log
 jenkins/jobs/my-serverless-pipeline/builds/3/build.xml
 .gitignore
+jenkins/jobs/my-serverless-pipeline/builds/5/build.xml
+jenkins/jobs/my-serverless-pipeline/builds/5/log
+jenkins/*
+.gitignore

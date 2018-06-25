@@ -6,12 +6,7 @@ pipeline {
     }
 
     stages {
-        stage ('init') {
-            steps {
-                
-            }
-        }
-
+        
         stage ('Deploy to DEV') {
 
             steps {
