@@ -42,7 +42,7 @@ pipeline {
              steps {
                 withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'sit-serverless', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
                     sh ''' 
-                       export TASKS_ENDPOINT=6pgn5wuqeh.execute-api.us-east-1.amazonaws.com/sit
+                       export TASKS_ENDPOINT=ax1hlqv0vl.execute-api.us-east-1.amazonaws.com/sit
                        ./node_modules/mocha/bin/mocha ./test/*.js
                     '''
                 }
