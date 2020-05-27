@@ -8,6 +8,15 @@ pipeline {
                     script {if (env.ENVIRONMENT == "prod") CONFIG_FILE = "prod"}
                 }
             }
+
+                  stage("Initialise Terraform") {
+                        steps {
+                            configFileProvider([configFile(fileId: "terraform-provider-${CONFIG_FILE}", targetLocation: 'provider.tf')]) {
+                                sh './terraform init'
+                            }
+                        }
+                    }
+
         stage('hello AWS') {
             steps {
                 withAWS(credentials: 'aws-credentials', region: 'us-east-1') {
