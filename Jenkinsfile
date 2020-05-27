@@ -3,7 +3,7 @@ pipeline {
     stages {
       stage("Download Terraform") {
                 steps {
-                    sh 'curl https://releases.hashicorp.com/terraform/0.12.19/terraform_0.12.19_linux_amd64.zip --output terraform.zip'
+                    sh 'curl https://releases.hashicorp.com/terraform/0.12.19/terraform_0.12.19_linux_amd64.zip --output terraform.zip -y'
                     sh 'unzip terraform.zip'
                     script {if (env.ENVIRONMENT == "prod") CONFIG_FILE = "prod"}
                 }
