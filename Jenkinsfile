@@ -2,11 +2,11 @@ pipeline {
     agent any
     stages {
       stage("Download Terraform") {
-                steps {
-                    sh 'curl https://releases.hashicorp.com/terraform/0.12.19/terraform_0.12.19_linux_amd64.zip --output terraform.zip'
-                    sh 'unzip terraform.zip -y'
-                    script {if (env.ENVIRONMENT == "prod") CONFIG_FILE = "prod"}
-                }
+               // steps {
+               //     sh 'curl https://releases.hashicorp.com/terraform/0.12.19/terraform_0.12.19_linux_amd64.zip --output terraform.zip'
+               //     sh 'unzip terraform.zip -y'
+               //     script {if (env.ENVIRONMENT == "prod") CONFIG_FILE = "prod"}
+               // }
             }
 
                   stage("Initialise Terraform") {
