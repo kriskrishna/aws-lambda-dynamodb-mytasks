@@ -1,6 +1,13 @@
 pipeline {
     agent any
     stages {
+      stage("Download Terraform") {
+                steps {
+                    sh 'curl https://releases.hashicorp.com/terraform/0.12.19/terraform_0.12.19_linux_amd64.zip --output terraform.zip'
+                    sh 'unzip terraform.zip'
+                    script {if (env.ENVIRONMENT == "prod") CONFIG_FILE = "prod"}
+                }
+            }
         stage('hello AWS') {
             steps {
                 withAWS(credentials: 'aws-credentials', region: 'us-east-1') {
