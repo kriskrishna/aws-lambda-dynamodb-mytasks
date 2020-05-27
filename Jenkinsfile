@@ -7,7 +7,7 @@ pipeline {
                //     sh 'unzip terraform.zip -y'
                //     script {if (env.ENVIRONMENT == "prod") CONFIG_FILE = "prod"}
                // }
-            }
+           // }
 
                   stage("Initialise Terraform") {
                         steps {
